@@ -12,7 +12,7 @@ namespace PhamasySystem2.Model
         public MedicineContext(DbContextOptions<MedicineContext> options): base(options)
         {
         }
-
+        //create medicine database adn table
         public DbSet<Medicines> Medicines { get; set; }
 
     }
