@@ -10,7 +10,7 @@ using PhamasySystem2.Model;
 namespace PhamasySystem2.Migrations
 {
     [DbContext(typeof(MedicineContext))]
-    [Migration("20210516154451_MyMigration")]
+    [Migration("20210516164600_MyMigration")]
     partial class MyMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
