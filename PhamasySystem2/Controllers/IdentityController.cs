@@ -41,7 +41,7 @@ namespace PhamasySystem2.Controllers
 
         [HttpPost]
         [Route("api/[controller]")]
-        public IActionResult AddMedicine(UserId userId)
+        public IActionResult AddIdentity(UserId userId)
         {
             _identity.AddIdentity(userId);
 
