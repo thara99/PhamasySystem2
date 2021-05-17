@@ -14,6 +14,7 @@ using PhamasySystem2.MedicinesData;
 using PhamasySystem2.CustomerData;
 using PhamasySystem2.Model;
 using Microsoft.EntityFrameworkCore;
+using PhamasySystem2.Identity;
 
 namespace PhamasySystem2
 {
@@ -33,10 +34,12 @@ namespace PhamasySystem2
 
             services.AddDbContextPool<MedicineContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MedicineContextConnectionString")));
             services.AddDbContextPool<CustomerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CustomerContextConnectionString")));
+            services.AddDbContextPool<IdentityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("IdentityContextConnectionString")));
 
 
             services.AddScoped<IMedicines, SqlMedicinesData>();
             services.AddScoped<ICustomer, SqlCustomerData>();
+            services.AddScoped<IIdentity, SqlIdentityData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
